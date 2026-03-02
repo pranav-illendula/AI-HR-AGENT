@@ -1,0 +1,7 @@
+﻿python-docx
+python-dotenv
+openai
+sentence-transformers
+pandas
+numpy
+openpyxl
