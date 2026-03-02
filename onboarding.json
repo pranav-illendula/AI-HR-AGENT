@@ -1,0 +1,32 @@
+{
+    "C525": {
+        "employee_id": "EMP_C525",
+        "name": "Noah Pillai",
+        "department": "AI Engineering",
+        "reporting_manager": "Engineering Manager",
+        "joining_date": "01 January 2024",
+        "checklist": [
+            "Document Verification",
+            "Laptop Allocation",
+            "Email Creation",
+            "HR Policy Briefing",
+            "Team Introduction"
+        ],
+        "status": "onboarding_initiated"
+    },
+    "C1": {
+        "employee_id": "EMP_C1",
+        "name": "Akash Pillai",
+        "department": "AI Engineering",
+        "reporting_manager": "Engineering Manager",
+        "joining_date": "01 January 2024",
+        "checklist": [
+            "Document Verification",
+            "Laptop Allocation",
+            "Email Creation",
+            "HR Policy Briefing",
+            "Team Introduction"
+        ],
+        "status": "onboarding_initiated"
+    }
+}
