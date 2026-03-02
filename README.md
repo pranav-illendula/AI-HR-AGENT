@@ -1,20 +1,6 @@
 # HR Agent System — README
 
-## Team Information
-
-Team Name: LOgicX
-College Name: IIITDM Kurnool
-Track: Track_1_HR_AGENT
-
-Team Members:
-
-- Billa SaiKrishna
-- Pranav illendula
-- Kandala Vivekananda
-- Mokshagna BC
-
-
----
+Note: Please update the file paths in the code to match the location of the CSV files on your system before running.
 
 ## Project Title
 
@@ -31,34 +17,11 @@ This project implements a modular HR Agent orchestration system that automates:
 * Interview questionnaire generation
 * Leave policy validation
 * HR query escalation detection
+* Offer Letter Generation
+* Interactive Onboarding Task Orchestration
 * Structured pipeline export to JSON
 
 The system combines AI reasoning with rule-based validation to ensure both intelligence and deterministic behavior.
-
-Main code file:
-
-final_netrik_2.py
-
-Datasets are placed inside:
-
-input/
-
----
-
-## Project Structure
-
-project/
-│
-├── code/
-│   └── final_netrik_2.py
-│
-├── input/
-│   ├── resume_dataset_1200.csv
-│   └── employee_leave_tracking_data.xlsx
-│
-└── README.md
-
----
 
 ## Overall Architecture
 
@@ -75,6 +38,9 @@ Modules used:
 * LLMQuestionnaireGenerator
 * PolicyLeaveManager
 * RuleBasedEscalation
+* CompensationEngine
+* OfferLetterGenerator
+* OnboardingManager
 
 Each module has a single responsibility.
 
@@ -376,3 +342,4 @@ This HR Agent demonstrates a production-style intelligent HR automation system c
 * Modular orchestration
 
 to automate the complete HR workflow.
+
