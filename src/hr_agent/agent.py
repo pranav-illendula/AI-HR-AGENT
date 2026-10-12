@@ -24,6 +24,7 @@ logging.getLogger("transformers").setLevel(logging.ERROR)
 
 #LOADING OPENAI KEY
 
+from config import RESUME_CSV, LEAVE_XLSX, OUTPUT_DIR, OFFERS_DIR
 load_dotenv()
 
 api_key = os.getenv("OPENAI_API_KEY")
@@ -821,7 +822,7 @@ class CompensationEngine:
 
 class OfferLetterGenerator:
 
-    STORAGE_PATH = "generated_offers"
+    STORAGE_PATH = str(OFFERS_DIR)
 
     OFFER_TEMPLATE = """
 ----------------------------------------------
@@ -909,7 +910,7 @@ Netrik Systems
 
 class OnboardingManager:
 
-    STORAGE_PATH = "onboarding_records"
+    STORAGE_PATH = str(OUTPUT_DIR / "onboarding_records")
 
     def __init__(self):
         os.makedirs(self.STORAGE_PATH, exist_ok=True)
@@ -1069,7 +1070,7 @@ if __name__ == "__main__":
     # PART 1: RESUME SCREENING + SCHEDULING
 
 
-    resume_csv_path = r"C:\Users\Welcome\OneDrive\Desktop\datasets\resume_dataset_1200.csv"
+    resume_csv_path = str(RESUME_CSV)
 
     df = pd.read_csv(resume_csv_path)
     candidates = load_candidates_from_csv(resume_csv_path)
@@ -1128,7 +1129,7 @@ if __name__ == "__main__":
 
     # PART 3: LEAVE MANAGEMENT
 
-    leave_file_path = r"C:\Users\Welcome\OneDrive\Desktop\datasets\employee leave tracking data.xlsx"
+    leave_file_path = str(LEAVE_XLSX)
 
     #leave_df = pd.read_excel(leave_file_path, nrows=10)
     leave_df = pd.read_excel(leave_file_path)
@@ -1238,11 +1239,11 @@ if __name__ == "__main__":
         }
     }
 
-    with open("results.json", "w") as f:
+    with open(OUTPUT_DIR / "results.json", "w") as f:
         json.dump(final_output, f, indent=4)
     print("Results exported to results.json")
 
-    with open("onboarding.json", "w") as f:
+    with open(OUTPUT_DIR / "onboarding.json", "w") as f:
       json.dump(agent.onboarding_mgr.records, f, indent=4)
 
     print("Onboarding records exported to onboarding.json")
